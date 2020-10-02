@@ -24,10 +24,16 @@ app.get('/api', (req, res) => {
 
 
 
-// Catch all other routes and return the index file
-app.get('*', (req, res) => {
-   res.send('app works!');  
-   //res.sendFile(path.join(__dirname, 'dist/index.html'));
+app.get('/',function(req,res){
+ res.sendFile(path.join(__dirname, 'index.html')); //__dirname : Ritorna la cartella del progetto
+});
+
+app.get('/about',function(req,res){
+ res.sendFile(path.join(__dirname,'about.html')); //__dirname : Ritorna la cartella del progetto
+});
+
+app.get('/sitemap',function(req,res){
+ res.sendFile(path.join(__dirname,'sitemap.html')); //__dirname : Ritorna la cartella del progetto
 });
 
 /**
