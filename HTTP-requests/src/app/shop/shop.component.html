@@ -1,0 +1,11 @@
+<button type="button" (click)="makeRequest()">Make typed request</button>
+
+<!--Uso un ciclo for per scandire tutta la lista di articoli-->
+<div *ngFor="let prod of productData">
+   <h3>{{prod.product_name}}</h3>
+   <b>fornitore {{prod.supplier}} </b>
+   <b>quantità {{prod.quantity}} </b>
+   <b>prezzo unitario {{prod.unit_price}} </b>
+   <hr>
+</div>
+
